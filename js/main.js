@@ -21,8 +21,15 @@ const app = new Vue({
             .catch(function (error) {
               console.log('errore:', error);
             })
-      // Using forEach loop
       };
+      // Secret sentence in console
+          axios.get('https://flynn.boolean.careers/exercises/api/random/sentence')
+            .then(function (response) {
+            console.log('Secret sentence:', response.data.response);
+          })
+          .catch(function (error) {
+            console.log('errore:', error);
+          })
     },
     methods: {
         visibleEmail() {
