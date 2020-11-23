@@ -15,7 +15,7 @@
         <h1>Generate 10 random Email</h1>
         <!-- Visibility -->
         <button @click="visibleEmail">
-            <span class="text-btn">Show emails</span>
+            <span :class="changeText" class="text-btn">{{ changeText }}</span>
         </button>
         <!-- To print email -->
         <p>

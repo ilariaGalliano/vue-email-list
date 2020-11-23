@@ -7,6 +7,7 @@ const app = new Vue({
     data: {
         isShown: true,
         emails: [],
+        changeText: 'Show email'
     },
     created(){
       const self = this;
@@ -16,7 +17,7 @@ const app = new Vue({
           axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function (response) {
               self.emails.push(response.data.response);
-              console.log('email random:', response.data.response);
+              //console.log('email random:', response.data.response);
             })
             .catch(function (error) {
               console.log('errore:', error);
@@ -34,6 +35,9 @@ const app = new Vue({
     methods: {
         visibleEmail() {
             this.isShown = ! this.isShown;
+            // To change the text inside the button
+            this.changeText = (this.changeText === 'Show email') ? 'Hide email' :'Show email'
         },
-    }
+
+   }
 });
