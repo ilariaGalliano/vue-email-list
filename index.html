@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Email list vue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" class="dsp-flex">
+
+        <h1>Generate 10 random Email</h1>
+        <!-- Visibility -->
+        <button @click="visibleEmail">
+            <span class="text-btn">Show emails</span>
+        </button>
+        <!-- To print email -->
+        <p>
+          <ol v-show="!isShown">
+             <li class="mail" v-for="email in emails">
+                 {{ email }}
+             </li>
+         </ol>
+        </p>
+        <p v-show="isShown">
+          <span class="no-visible">Nessuna email</span>
+        </p>
+
+
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Js -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

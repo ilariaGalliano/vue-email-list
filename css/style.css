@@ -1,0 +1,54 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  padding: 30px;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(45deg,goldenrod,orange) fixed;
+}
+button{
+  height: 60px;
+  background: #fff;
+  color: goldenrod;
+  border-radius: 10px;
+  border: 0;
+  margin-bottom: 30px;
+}
+h1{
+  font-size: 34px;
+  color: #fff;
+  margin: 30px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Button */
+.text-btn{
+  padding: 15px 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* List */
+.mail{
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.no-visible{
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Utility */
+.dsp-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
